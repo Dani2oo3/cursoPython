@@ -1,3 +1,26 @@
+def tiposDeDatos():
+    """
+    Los tipos de datos en Python son: int, float, complex, str, bool, list, tuple, dict, set.
+    """
+
+    entero = 5
+    flotante = 5.5
+    complejo = 5 + 5j
+    cadena = 'Hola mundo'
+    booleano = True
+
+    print(f'Entero: {entero}')
+    print(f'Flotante: {flotante}')
+    print(f'Complejo: {complejo}')
+    print(f'Cadena: {cadena}')
+    print(f'Booleano: {booleano}')
+
+    print(f'Tipo de dato de la variable entero: {type(entero)}')
+    print(f'Tipo de dato de la variable flotante: {type(flotante)}')
+    print(f'Tipo de dato de la variable complejo: {type(complejo)}')
+    print(f'Tipo de dato de la variable cadena: {type(cadena)}')
+    print(f'Tipo de dato de la variable booleano: {type(booleano)}')
+
 def operadoresAritmeticos():
     suma = 5 + 2
     resta = 5 - 2
@@ -68,12 +91,24 @@ def tuplasPython():
     print(f'Elemento en la posición -4: {tupla[-4]}')
     print(f'Elemento en la posición -5: {tupla[-5]}')
 
-"""
-Las listas son mutables, es decir, se pueden modificar sus elementos.
-Las tuplas son inmutables, es decir, no se pueden modificar sus elementos.
-    
-Las listas se definen con corchetes [] y las tuplas con paréntesis ().
-"""
+def difernciaEntreListasYTuplas():
+    """
+    Las listas son mutables, es decir, se pueden modificar sus elementos.
+    Las tuplas son inmutables, es decir, no se pueden modificar sus elementos.
+
+    Las listas se definen con corchetes [] y las tuplas con paréntesis ().
+    """
+
+    lista = [1, 2, 3]
+    tupla = (1, 2, 3)
+
+    lista[0] = 4
+    print(lista)
+
+    try:
+        tupla[0] = 4
+    except TypeError:
+        print('No se puede modificar una tupla')
 
 def diccionariosPython():
     """
@@ -127,11 +162,58 @@ def operadoresLogicos():
     print(f'OR: {a or b}')
     print(f'NOT: {not a}')
 
+def estructurasControl():
+    """
+    Las estructuras de control en Python son: if, elif, else, for, while.
+    """
+
+    edad = 18
+
+    if edad >= 18:
+        print('Eres mayor de edad')
+    else:
+        print('Eres menor de edad')
+
+    for i in range(5):
+        print(i)
+
+    x = 0
+    while x < 5:
+        print(x)
+        x += 1
+
+def entradaSalida():
+    """
+    La entrada y salida de datos en Python se realiza con las funciones input() y print().
+    """
+
+    nombre = input('Ingresa tu nombre: ')
+    print(f'Hola {nombre}')
+
+def excepciones():
+    """
+    Las excepciones en Python se manejan con las sentencias try, except, else, finally.
+    """
+
+    try:
+        x = 5 / 0
+    except ZeroDivisionError:
+        print('No se puede dividir entre cero')
+    else:
+        print('División exitosa')
+    finally:
+        print('Fin del programa')
+
 if __name__ == '__main__':
+    tiposDeDatos()
     operadoresAritmeticos()
     operadoresComparacion()
     listasPython()
     tuplasPython()
+    difernciaEntreListasYTuplas()
     diccionariosPython()
     setsPython()
     operadoresLogicos()
+    estructurasControl()
+    entradaSalida()
+    excepciones()
