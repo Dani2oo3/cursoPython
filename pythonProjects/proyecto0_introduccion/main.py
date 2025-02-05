@@ -205,6 +205,13 @@ def excepciones():
         print('Fin del programa')
 
 if __name__ == '__main__':
+    """
+    Función principal.
+    __name__ es una variable especial que se inicializa con el valor 
+    '__main__' cuando el script se ejecuta directamente
+    
+    Si el script se importa como un módulo, __name__ se inicializa con el nombre del módulo.
+    """
     tiposDeDatos()
     operadoresAritmeticos()
     operadoresComparacion()
