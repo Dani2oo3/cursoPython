@@ -366,6 +366,19 @@ def excepciones():
     finally:
         print('Fin del programa')
 
+def cadenas():
+    # Pedimos el nombre de la cadena
+    cadena = input('Ingresa una cadena de texto: ')
+
+    # Le quitamos la ultima letra
+    cadena = cadena[:-1]
+
+    # [x:y:z] x significa desde donde empieza, y significa hasta donde termina, z significa cada cuanto se va a saltar
+    # Si no ponemos nada, x por defecto es 0, y por defecto es el final de la cadena, z por defecto es 1
+    # Al poner [:-1] le estamos diciendo que empiece desde el principio de la cadena, que termine en el penultimo caracter y que se salte de uno en uno
+
+    print(cadena);
+
 if __name__ == '__main__':
     """
     Función principal.
@@ -375,15 +388,16 @@ if __name__ == '__main__':
     Si el script se importa como un módulo, __name__ se inicializa con el nombre del módulo.
     """
 
-    tiposDeDatos()
-    operadoresAritmeticos()
-    operadoresComparacion()
-    listasPython()
-    tuplasPython()
-    diferenciaEntreListasYTuplas()
-    diccionariosPython()
-    setsPython()
-    operadoresLogicos()
-    estructurasControl()
-    entradaSalida()
-    excepciones()
+    #tiposDeDatos()
+    #operadoresAritmeticos()
+    #operadoresComparacion()
+    #listasPython()
+    #tuplasPython()
+    #diferenciaEntreListasYTuplas()
+    #diccionariosPython()
+    #setsPython()
+    #operadoresLogicos()
+    #estructurasControl()
+    #entradaSalida()
+    #excepciones()
+    cadenas()
